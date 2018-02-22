@@ -7,7 +7,7 @@ pipeline {
         }
 
         stages {
-                stage('init') {
+                stage('Initialize') {
                         steps {
                                 sh '''
                                         echo "PATH = ${PATH}"
@@ -15,7 +15,7 @@ pipeline {
                                 '''
                         }
                 }
-                stage() {
+                stage('Build') {
                         steps {
                                 sh 'mvn install'
                         }
